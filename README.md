@@ -1,2 +1,2 @@
-# SFIA-SE-Backend-Skills
-SpringBoot application used to call get requests
+# SFIA-SE-Backend-SkillList
+SpringBoot application used to call the list of skills
