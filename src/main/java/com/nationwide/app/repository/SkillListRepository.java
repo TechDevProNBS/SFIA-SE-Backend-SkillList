@@ -11,8 +11,15 @@ import org.springframework.stereotype.Repository;
 
 import com.nationwide.app.model.SkillList;
 
+/**Communicates with {@link SkillListController} with the {@link findAll} function.
+ * @author willg
+ *
+ */
 @Repository
-public interface SkillRepository extends MongoRepository<SkillList, String> {
+public interface SkillListRepository extends MongoRepository<SkillList, String> {
+	/**Returns a list of type {@link SkillList}- all entries within skill_list database.
+	 *
+	 */
 	public List<SkillList> findAll();
 	
 }

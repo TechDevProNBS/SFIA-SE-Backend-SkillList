@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import com.nationwide.app.repository.SkillRepository;
+import com.nationwide.app.repository.SkillListRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,12 +17,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.nationwide.app.model.SkillList;
 
+/**Maps the {@link finaAll} function from {@link SkillListRepository} .
+ * @author willg
+ *
+ */
 @RestController
 @CrossOrigin("*")
 public class SkillListController {
 
 	@Autowired
-	private SkillRepository repo;
+	private SkillListRepository repo;
 	
 	@RequestMapping("/API/showSkillList")
 	public List<SkillList> showSkillList() {

@@ -8,8 +8,11 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.format.annotation.DateTimeFormat;
 
-
-
+/**Mirrors data structure for the skill list page from skill_list collection on MongoDB Atlas.
+ * Contains {@link Subcategories} and {@link Skills}.
+ * @author willg
+ *
+ */
 @Document(collection = "skill_list")
 
 public class SkillList {

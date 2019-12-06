@@ -2,6 +2,10 @@ package com.nationwide.app.model;
 
 import java.util.List;
 
+/** Embedded within {@link SkillList} class to define the subcategories and their skills. Contains {@link Skills}.
+ * @author willg
+ *
+ */
 public class Subcategories {
 	
 		private String subcategory_name;
