@@ -1,52 +1,30 @@
- pipeline {
+pipeline {
     agent any
-        environment {
-        VERSION = readMavenPom().getVersion()
-        registry = "shahe/repository_name"
-        registryCredential = ‘dockerhub’
-        }
     stages {
         stage('Testing Environment') {
             steps {
-                 
+            echo "Testing env"
                 }
             }
         stage('Build') {
             steps {
-               echo "Build"
+                 echo "build"
                 }
             }
         stage('Deploy') {
             steps {
-                 echo "Hello"
-            }
-          }
-        stage('Staging') {
-            when {
-            expression {
-                    }
-                 }
-            steps {
-                echo "hello"
+                echo "deploy"
             }
         }
-        stage('Production') {
-            when {
-            expression {
-                   env.BRANCH_NAME == 'feature-documented'
-                       }
-                 }
+      stage('Production') {
+	when {
+		expression {
+			env.BRANCH_NAME=='feature-documented'
+		}
+	}
             steps {
-                echo "Hello hello hello"
-                sh 'mvn package -DskipTests'
-                sh 'docker image build -t="shahe/sfia-skilllist:latest" .'
-                sh 'docker push shahe/sfia-skilllist:latest'
-            }
-          }
-        stage ("version"){
-            steps {
-                 echo "${VERSION}"
+                echo "Sebs a plonker"
             }
         }
-    }
+}
 }
