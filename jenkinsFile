@@ -6,8 +6,7 @@
     stages {
         stage('Testing Environment') {
             steps {
-                    sh 'mvn test -Dtest=ControllerAndServiceSuite'
-                    sh 'mvn test -Dtest=IntegrationSuite'
+                 
                 }
             }
         stage('Build') {
@@ -23,9 +22,7 @@
         stage('Staging') {
             when {
             expression {
-                   env.BRANCH_NAME == 'developer'
-                   env.BRANCH_NAME == 'master'
-                       }
+                    }
                  }
             steps {
                 echo "hello"
@@ -34,15 +31,13 @@
         stage('Production') {
             when {
             expression {
-                   env.BRANCH_NAME == 'master'
+                   env.BRANCH_NAME == 'feature_documented'
                        }
                  }
             steps {
                 sh 'mvn package -DskipTests'
                 sh 'docker image build -t="SFIA-SE-Backend-Responsibilities:latest" .'
-                sh 'docker push sebs2112/SFIA-SE-Backend-Responsibilities:latest'
-                ./ansiblescript 
-                echo "Ansible script runs the playbook"
+                sh 'docker push SFIA-SE-Backend-Responsibilities:latest'
             }
           }
         stage ("version"){
