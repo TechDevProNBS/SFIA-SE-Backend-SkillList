@@ -33,7 +33,7 @@
         stage('Production') {
             when {
             expression {
-                   env.BRANCH_NAME == 'feature_documented'
+                   env.BRANCH_NAME == 'feature-documented'
                        }
                  }
             steps {
