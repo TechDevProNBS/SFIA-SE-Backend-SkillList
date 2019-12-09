@@ -36,8 +36,8 @@
                  }
             steps {
                 sh 'mvn package -DskipTests'
-                sh 'docker image build -t="sebs2112/SFIA-SkillList:latest" .'
-                sh 'docker push sebs2112/SFIA-SkillList:latest'
+                sh 'docker image build -t="shahe/SFIA-SkillList:latest" .'
+                sh 'docker push shahe/SFIA-SkillList:latest'
             }
           }
         stage ("version"){
