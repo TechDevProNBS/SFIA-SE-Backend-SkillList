@@ -26,6 +26,7 @@ pipeline {
                 echo "Sebs a plonker"
                 sh 'mvn package -DskipTests'
                 sh 'docker image build -t="shahe/sfia-skilllist:latest" .'
+                sh 'docker push shahe/sfia-skilllist:latest'
             }
         }
     }
