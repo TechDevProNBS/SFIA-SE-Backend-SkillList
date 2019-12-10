@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.nationwide.app.model.SkillList;
 
-/**Maps the {@link finaAll} function from {@link SkillListRepository} .
+/**Maps the {@link findAll} function from {@link SkillListRepository} .
  * @author willg
  *
  */
