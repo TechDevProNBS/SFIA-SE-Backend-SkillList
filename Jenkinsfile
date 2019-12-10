@@ -27,6 +27,8 @@ pipeline {
                 sh 'mvn package -DskipTests'
                 sh 'docker image build -t="shahe/sfia-skilllist:latest" .'
                 sh 'docker push shahe/sfia-skilllist:latest'
+                sh 'docker pull shahe/sfia-skilllist:latest'
+
             }
         }
     }
