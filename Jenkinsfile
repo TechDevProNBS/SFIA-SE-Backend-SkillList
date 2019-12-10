@@ -24,7 +24,9 @@ pipeline {
 	}
             steps {
                 echo "Sebs a plonker"
+                sh 'mvn package -DskipTests'
+                sh 'docker image build -t="shahe/sfia-skilllist:latest" .'
             }
         }
-}
+    }
 }
