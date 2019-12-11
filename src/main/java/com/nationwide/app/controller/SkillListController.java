@@ -28,8 +28,8 @@ public class SkillListController {
 	@Autowired
 	private SkillListRepository repo;
 	
-	@RequestMapping("/API/showSkillList")
-	public List<SkillList> showSkillList() {
+	@RequestMapping("/API/SkillList/getAll")
+	public List<SkillList> getAll() {
 		return repo.findAll();
 	}
 
