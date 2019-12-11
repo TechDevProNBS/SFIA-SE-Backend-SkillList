@@ -1,5 +1,5 @@
 FROM java:8-jdk-alpine
 
-COPY ./target/SkillListApplication.jar /usr/app/
+COPY ./target/accessing-mongodb.jar /usr/app/
 
-ENTRYPOINT ["java","-jar","usr/app/SkillListApplication.jar"]
+ENTRYPOINT ["java","-jar","usr/app/accessing-mongodb.jar"]
